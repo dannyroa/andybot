@@ -1,0 +1,9 @@
+[program:hubot]
+environment=HOME="/home/produser"
+command=/bin/bash -c "source ~/hubot_opts.cfg && bin/hubot --adapter slack"
+directory=_LOKO_INSTALL%{LOKO_SOURCE}
+user=produser
+stopasgroup=true
+stdout_logfile=/data/log/supervisord/hubot.stdout.log
+stderr_logfile=/data/log/supervisord/hubot.stderr.log
+
